@@ -1,7 +1,7 @@
 import Link from 'next/link'
 
-function PostsSsr({data}){
-    if(!data) return <span>Loading...</span>
+function PostsSsr({data}) {
+    if (!data) return <span>Loading...</span>
     return (<div>
         <ul>
             {data.map(({id, title, body}) => {
@@ -21,11 +21,11 @@ function PostsSsr({data}){
 }
 
 
-export async function getServerSideProps() {
+export async function getStaticProps() {
     const res = await fetch(`http://jsonplaceholder.typicode.com/posts`)
     const data = await res.json()
 
-    return { props: { data } }
+    return {props: {data}}
 }
 
 export default PostsSsr;

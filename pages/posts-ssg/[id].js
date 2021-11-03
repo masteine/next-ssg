@@ -5,7 +5,7 @@ function PostsSsrDetails({data}) {
     const {id, title, body} = data;
     return (
         <div style={{textAlign: 'center', padding: '3rem'}}>
-            <Link href="/posts-ssr"><a>
+            <Link href="/posts-ssg"><a>
                 <button>Go back</button>
             </a></Link>
             <div key={id}>

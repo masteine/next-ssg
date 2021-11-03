@@ -9,7 +9,7 @@ function PostsSsr({data}) {
                     <div key={id} style={{textAlign: 'center'}}>
                         <h3>{title}</h3>
                         <p>{body}</p>
-                        <Link href={`/posts-ssr/${id}`}>
+                        <Link href={`/posts-ssg/${id}`}>
                             <a style={{color: 'blue'}}>More details</a>
                         </Link>
                         <hr/>
